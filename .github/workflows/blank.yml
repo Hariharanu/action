@@ -1,9 +1,11 @@
-name : CI
-on : 
+name: CI
+on:
   workflow_dispatch:
 jobs:
-  say-hello:
+  job-1:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
-        run: echo "Hello, World!"
+      - name: cole repo
+        uses: actions/checkout@v6
+      - name: run code
+        run: node a.js
